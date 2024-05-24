@@ -1,14 +1,17 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 export default function Header() {
+  const t = useTranslations("Header");
+
   return (
     <header className="mb-3 border-b border-sky-900/75 pb-2 text-sm">
       <nav>
         <ul className="flex gap-4">
           <li>
             <Link href="/" className="font-medium text-sky-300">
-              Next Weather
+              {t("appTitle")}
             </Link>
           </li>
           <li>
