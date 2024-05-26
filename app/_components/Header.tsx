@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n.config";
 import React from "react";
 
 export default function Header() {
@@ -15,12 +15,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-light text-sky-200">
+            <Link href="/week" className="font-light text-sky-200">
               {t("navLinks.week")}
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-light text-sky-200">
+            <Link href="/about" className="font-light text-sky-200">
               {t("navLinks.about")}
             </Link>
           </li>
