@@ -1,3 +1,5 @@
+import WeatherAlerts from "../_components/WeatherAlerts/WeatherAlerts";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -10,6 +12,8 @@ export default function Home() {
           <p>22°C</p>
         </div>
       </section>
+
+      <WeatherAlerts />
     </main>
   );
 }
