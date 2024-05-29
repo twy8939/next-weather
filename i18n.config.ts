@@ -5,7 +5,7 @@ export type Locale = (typeof locales)[number];
 
 export const localeNames: Record<Locale, string> = {
   "en-us": "English",
-  "ar-eg": "العربية Arabic",
+  "ar-eg": "العربية (Arabic)",
 };
 
 export const { Link, usePathname, useRouter } = createSharedPathnamesNavigation(
