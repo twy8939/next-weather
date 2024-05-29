@@ -8,5 +8,14 @@
   },
   "WeatherAlerts": {
     "title": "Weather Alerts"
+  },
+  "Week": {
+    "title": "This week's weather",
+    "sunny": "Sunny",
+    "cloudy": "Cloudy",
+    "rainy": "Rainy",
+    "partlyCloudy": "Partly Cloudy",
+    "showers": "Showers",
+    "thunderstorms": "Thunderstorms"
   }
 }
