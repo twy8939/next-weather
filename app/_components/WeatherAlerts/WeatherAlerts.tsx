@@ -1,35 +1,36 @@
-"use client";
+import { Locale } from "@/i18n.config";
+import { useLocale, useTranslations } from "next-intl";
+import React from "react";
+import ClientWeatherAlerts from "./ClientWeatherAlerts";
 
-import React, { useState } from "react";
+const mockWeatherAlerts = {
+  "en-us": [
+    "🌩️ Severe Thunderstorm Warning until 09:00 PM",
+    "🌨️ Blizzard Warning in effect from 01:00 AM",
+    "🌊 Coastal Flood Advisory from noon today to 10:00 PM",
+  ],
+  "ar-eg": [
+    "🌩️ تحذير من عاصفة رعدية شديدة حتى الساعة 09:00 مساءً",
+    "🌨️ تحذير من عاصفة ثلجية قائمة بدءًا من الساعة 01:00 صباحًا",
+    "🌊 تنبيه من فيضان ساحلي من الظهيرة اليوم حتى الساعة 10:00 مساءً",
+  ],
+};
 
-export default function WeatherAlerts() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleAlerts = () => setIsOpen(!isOpen);
+function WeatherAlerts() {
+  const t = useTranslations("WeatherAlerts");
+
+  const locale = useLocale() as Locale;
+  const alerts = mockWeatherAlerts[locale];
+
   return (
-    <div>
-      <div
-        className={`
-          flex cursor-pointer items-center justify-between bg-red-200 p-4 text-red-900 ${
-            isOpen ? "rounded-t-md" : "rounded-md"
-          }`}
-        onClick={toggleAlerts}
-      >
-        Weather Alerts
-        <span
-          className={`transform transition-transform ${isOpen && "rotate-180"}`}
-        >
-          &#9660;
-        </span>
-      </div>
-      {isOpen && (
-        <div className="divide-y divide-dashed divide-white/20 rounded-b-md bg-red-900 p-4 text-red-100">
-          <p className="py-2">🌩️ Severe Thunderstorm Warning until 09:00 PM</p>
-          <p className="py-2">🌨️ Blizzard Warning in effect from 01:00 AM</p>
-          <p className="py-2">
-            🌊 Coastal Flood Advisory from noon today to 10:00 PM
-          </p>
-        </div>
-      )}
-    </div>
+    <ClientWeatherAlerts title={t("title")}>
+      {alerts.map((alert) => (
+        <p className="py-2" key={alert}>
+          {alert}
+        </p>
+      ))}
+    </ClientWeatherAlerts>
   );
 }
+
+export default WeatherAlerts;
