@@ -1,6 +1,12 @@
+import { unstable_setRequestLocale } from "next-intl/server";
 import WeatherAlerts from "../_components/WeatherAlerts/WeatherAlerts";
 
-export default function Home() {
+export default function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   return (
     <main className="min-h-screen">
       <h1 className="text-xs font-thin">Today&apos;s weather</h1>
