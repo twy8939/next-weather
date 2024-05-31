@@ -3,6 +3,7 @@ import "../globals.css";
 import Header from "../_components/Header";
 import { Locale, locales } from "@/i18n.config";
 import { unstable_setRequestLocale } from "next-intl/server";
+import useTextDirection from "../_hooks/useTextDirection";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -21,8 +22,10 @@ export default function LocaleLayout({
   params: { locale: Locale };
 }>) {
   unstable_setRequestLocale(locale);
+
+  const dir = useTextDirection();
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <body className={"mx-auto w-[500px] bg-slate-950 px-6 pt-3 text-sky-100"}>
         <Header />
         {children}
