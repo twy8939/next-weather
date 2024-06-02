@@ -9,6 +9,9 @@
   "WeatherAlerts": {
     "title": "Weather Alerts"
   },
+  "Home": {
+    "userGreeting": "👋 Welcome, {name}!"
+  },
   "Week": {
     "title": "This week's weather",
     "sunny": "Sunny",
