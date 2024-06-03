@@ -14,11 +14,14 @@ export default async function Home() {
     <main className="min-h-screen">
       <h1 className="text-xs font-thin">{t("title")}</h1>
       <div className="divide-y divide-dashed divide-sky-900">
-        {weeklyWeather.map((day) => (
+        {weeklyWeather.map((day, index) => (
           <section key={day.dateTime} className="py-5">
             <h2 className="text-md font-thin mb-1">
               {new Date(day.dateTime).toString()}
             </h2>
+            <p className="w-max rounded-md bg-red-900 px-2 py-1 text-xs text-red-100">
+              {t("alertCount", { count: index })}
+            </p>
             <div>
               <div className="flex items-baseline gap-3">
                 <p className="relative top-1 text-3xl">{day.conditionIcon}</p>

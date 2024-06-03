@@ -14,6 +14,7 @@
   },
   "Week": {
     "title": "طقص الأسبوع",
+    "alertCount": "{count, plural, zero {لا توجد تنبيهات} one {يوجد تنبيه واحد} two {يوجد تنبيهان} few {يوجد {count, number} تنبيهات} many {يوجد {count, number} تنبيه} other {يوجد {count, number} تنبيه}}",
     "sunny": "مشمس",
     "cloudy": "غائم",
     "rainy": "ممطر",
