@@ -21,5 +21,8 @@
     "partlyCloudy": "غائم جزئيا",
     "showers": "زخات مطرية",
     "thunderstorms": "عواصف رعدية"
+  },
+  "About": {
+    "liveDuration": "لقد كنا على الهواء مباشرة لمدة {duration, number, ::precision-integer} ثانية."
   }
 }

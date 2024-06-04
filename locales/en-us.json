@@ -21,5 +21,8 @@
     "partlyCloudy": "Partly Cloudy",
     "showers": "Showers",
     "thunderstorms": "Thunderstorms"
+  },
+  "About": {
+    "liveDuration": "We've been live for {duration, number, ::precision-integer} seconds."
   }
 }
