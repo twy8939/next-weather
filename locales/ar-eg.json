@@ -24,6 +24,8 @@
     "thunderstorms": "عواصف رعدية"
   },
   "About": {
-    "liveDuration": "لقد كنا على الهواء مباشرة لمدة {duration, number, ::precision-integer} ثانية."
+    "title": "نبذة عنا",
+    "liveDuration": "لقد كنا على الهواء مباشرة لمدة {duration, number, ::precision-integer} ثانية.",
+    "description": "هذا تطبيق طقس وهمي بسيط تم إنشاؤه باستخدام <linkToNext>نكست چى أس</linkToNext>."
   }
 }

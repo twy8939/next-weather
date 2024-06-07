@@ -24,6 +24,8 @@
     "thunderstorms": "Thunderstorms"
   },
   "About": {
-    "liveDuration": "We've been live for {duration, number, ::precision-integer} seconds."
+    "title": "About",
+    "liveDuration": "We've been live for {duration, number, ::precision-integer} seconds.",
+    "description": "This is a minimalistic mock weather app built with <linkToNext>Next.js</linkToNext>."
   }
 }
