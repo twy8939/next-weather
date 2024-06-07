@@ -1,5 +1,5 @@
 import { promises as fs } from "fs";
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 
 export default async function Home() {
   const fileContents = await fs.readFile(
@@ -10,6 +10,8 @@ export default async function Home() {
 
   const t = await getTranslations("Week");
 
+  const format = await getFormatter();
+
   return (
     <main className="min-h-screen">
       <h1 className="text-xs font-thin">{t("title")}</h1>
@@ -17,7 +19,9 @@ export default async function Home() {
         {weeklyWeather.map((day, index) => (
           <section key={day.dateTime} className="py-5">
             <h2 className="text-md font-thin mb-1">
-              {new Date(day.dateTime).toString()}
+              {t("dayDate", {
+                dayDate: new Date(day.dateTime),
+              })}
             </h2>
             <p className="w-max rounded-md bg-red-900 px-2 py-1 text-xs text-red-100">
               {t("alertCount", { count: index })}

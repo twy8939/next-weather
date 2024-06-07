@@ -20,7 +20,9 @@ export default function Home({
       </p>
 
       <h1 className="text-xs font-thin">Today&apos;s weather</h1>
-      <h2 className="text-lg">Tuesday May 21 2024</h2>
+      <h2 className="text-lg">
+        {format.dateTime(new Date("2024-06-07"), { dateStyle: "full" })}
+      </h2>
       <section>
         <div className="flex items-baseline gap-3">
           <p>☀️</p>

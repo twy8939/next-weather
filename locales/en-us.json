@@ -14,6 +14,7 @@
   },
   "Week": {
     "title": "This week's weather",
+    "dayDate": "{dayDate, date, ::EEEE}",
     "alertCount": "{count, plural, =0 {No alerts} one {One alert!} other {# alerts!}}",
     "sunny": "Sunny",
     "cloudy": "Cloudy",
