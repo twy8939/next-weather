@@ -27,5 +27,11 @@
     "title": "نبذة عنا",
     "liveDuration": "لقد كنا على الهواء مباشرة لمدة {duration, number, ::precision-integer} ثانية.",
     "description": "هذا تطبيق طقس وهمي بسيط تم إنشاؤه باستخدام <linkToNext>نكست چى أس</linkToNext>."
+  },
+  "Layout": {
+    "metaData": {
+      "title": "تقص نكست چى إس",
+      "description": "تطبيق طقس وهمي بسيط تم إنشاؤه باستخدام Next.js و next-intl."
+    }
   }
 }
