@@ -5,7 +5,7 @@ declare global {
   interface IntlMessages extends Messages {}
 }
 
-interface WeeklyWeatherRoot {
+export interface WeeklyWeatherRoot {
   weeklyWeather: WeeklyWeather[];
 }
 
@@ -17,14 +17,14 @@ type Condition =
   | "showers"
   | "thunderstorms";
 
-interface WeeklyWeather {
+export interface WeeklyWeather {
   dateTime: string;
   condition: Condition;
   conditionIcon: string;
   temperature: Temperature;
 }
 
-interface Temperature {
+export interface Temperature {
   celsius: number;
   fahrenheit: number;
 }

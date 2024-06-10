@@ -1,3 +1,4 @@
+import { WeeklyWeatherRoot } from "@/types";
 import { promises as fs } from "fs";
 import { getFormatter, getTranslations } from "next-intl/server";
 
